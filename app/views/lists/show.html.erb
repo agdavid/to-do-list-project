@@ -1,10 +1,15 @@
 <header>
   <h1><%= @list.name %></h1>
-  <input placeholder="Add an item...">
+  <!-- New Item Form in lists/show for nested resource item in lists -->
+  <%= form_for([@list, @item]) do |item_builder|%>
+  <%= item_builder.text_field :description, :placeholder => (@item.errors.full_messages_for(:description).first || "Enter a new item...")%>
+  <%= item_builder.submit :style => "display: none" %>
+  <% end %>
 </header>
 <body>
-  <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-  </ul>
+   <ul>
+    <% @list.items.each do |item| %>
+       <li> <%= item.description %></li>
+    <% end %>
+  </ul> 
 </body>
