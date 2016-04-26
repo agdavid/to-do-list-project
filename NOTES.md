@@ -28,7 +28,7 @@ Step 2: Add Items to a List
 [x] Step 3: Add Base Styling
   - utilize ToDo MVC base styling (http://todomvc.com/)
 
-Step 4: Add State to Items (complete or incomplete)
+[x] Step 4: Add State to Items (complete or incomplete)
   - route: PUT/PATCH lists/:list_id/items/:id
     - patch requested using nested resource to associate updated item with list
   - action: items#update
