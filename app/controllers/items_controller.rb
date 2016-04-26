@@ -22,6 +22,13 @@ class ItemsController < ApplicationController
     redirect_to list_path(@item.list)
   end
 
+  #DELETE - /lists/:list_id/items/:id
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to list_path(@item.list)
+  end
+
   private #strong params
     def item_params
       params.require(:item).permit(:description, :status)
