@@ -3,7 +3,7 @@
     <div class="view"> 
     <!-- check_box form to POST lists/:list_id/items/:id ; items#update -->
       <%= form_for([@list, item]) do |f| %>
-        <%= f.check_box :status, :class => "toggle", :checked => (true if item.complete?)%>
+        <%= f.check_box :status, :class => "toggle", :checked => item.complete?%>
       <% end %>
 
       <label><%= item.description %></label>
