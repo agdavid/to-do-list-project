@@ -10,17 +10,7 @@
   <section class="main">
      <ul class="todo-list">
       <% @list.items.each do |item| %>
-        <!-- add strikethrough styling to class if complete -->
-         <li class="<%= "completed" if item.complete? %>"> 
-           <div class="view"> 
-            <!-- check_box form to POST lists/:list_id/items/:id ; items#update -->
-            <%= form_for([@list, item]) do |f| %>
-              <%= f.check_box :status, :class => "toggle", :checked => (true if item.complete?)%>
-            <% end %>
-
-            <label><%= item.description %></label>
-          </div>
-        </li>
+        <%= render :partial => "list_li", :locals => {:item => item}%>
       <% end %>
     </ul> 
   </section>  <!-- close .main -->
