@@ -9,9 +9,7 @@
   </header> <!-- close .header -->
   <section class="main">
      <ul class="todo-list">
-      <% @list.items.each do |item| %>
-        <%= render "list_li", :item => item %>
-      <% end %>
+      <%= render :collection => @list.items, :partial => "list_li", :as => :item %>
     </ul> 
   </section>  <!-- close .main -->
   <footer class="footer">

@@ -3948,3 +3948,71 @@ Processing by ListsController#show as HTML
   Rendered lists/_list_li.html.erb (0.6ms)
   Rendered lists/show.html.erb within layouts/application (5.1ms)
 Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-04-26 14:05:55 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered lists/_list_li.html.erb (1.6ms)
+  Rendered lists/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/base.self-840f95bbb8711a8c2206d3db0d06f22895519ca0c73e61b161ffa26251fb69e9.css?body=1" for ::1 at 2016-04-26 14:05:55 -0400
+
+
+Started GET "/assets/lists.self-5e64df0201ac31cda15d2138ec18719920a1502ebf642aebcddafc969bfe3284.css?body=1" for ::1 at 2016-04-26 14:05:55 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-26 14:05:55 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-26 14:05:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-26 14:05:55 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-26 14:05:55 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-04-26 14:05:55 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-04-26 14:05:55 -0400
+
+
+Started GET "/lists/1" for ::1 at 2016-04-26 14:06:27 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 1]]
+  Rendered lists/_list_li.html.erb (1.4ms)
+  Rendered lists/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/lists.self-5e64df0201ac31cda15d2138ec18719920a1502ebf642aebcddafc969bfe3284.css?body=1" for ::1 at 2016-04-26 14:06:27 -0400
+
+
+Started GET "/assets/base.self-840f95bbb8711a8c2206d3db0d06f22895519ca0c73e61b161ffa26251fb69e9.css?body=1" for ::1 at 2016-04-26 14:06:27 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-26 14:06:27 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-26 14:06:27 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-26 14:06:27 -0400
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-26 14:06:27 -0400
+
+
+Started GET "/assets/lists.self-9d4b2205ff736a0fd786f2190e96956207bdff8a1be9030fbf6c080af703dc13.js?body=1" for ::1 at 2016-04-26 14:06:27 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-04-26 14:06:27 -0400
