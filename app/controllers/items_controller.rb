@@ -7,13 +7,15 @@ class ItemsController < ApplicationController
     @item = @list.items.build(item_params)
     #validate before saving
     if @item.save
+      #validations pass, go to updated lists/show
       redirect_to list_path(@list)
     else
+      #validations fail, go to lists/show with @list with errors
       render "/lists/show"
     end
   end
 
-  private
+  private #strong params
     def item_params
       params.require(:item).permit(:description)
     end

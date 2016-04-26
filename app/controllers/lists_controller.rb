@@ -7,7 +7,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
-    @item = @list.items.build
+    @item = Item.new #debugged; otherwise added "nil" item to list of items
   end
 
   def create

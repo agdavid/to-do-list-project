@@ -25,3 +25,6 @@ Step 2: Add Items to a List
       - config/routes
       - items controller
 
+Step 3: Add Base Styling
+  - utilize ToDo MVC base styling (http://todomvc.com/)
+

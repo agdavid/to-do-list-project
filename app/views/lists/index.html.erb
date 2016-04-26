@@ -1,16 +1,24 @@
-<header>
-  <h1>Your Lists</h1>
-  <!-- New List Form incorporated into lists/index view -->
-  <%= form_for(@list) do |list_builder| %>
-    <%= list_builder.text_field :name, :placeholder => (@list.errors.full_messages_for(:name).first || "Enter a new list name...") %>
-    <%= list_builder.submit :style => "display: none" %>
-  <% end %>
-</header>
-<body>
-  <!--Index of all Lists -->
-  <ul>
-    <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %></li>
+<section class="todoapp">
+  <header class="header">
+    <h1>Your Lists</h1>
+    <!-- New List Form incorporated into lists/index view -->
+    <%= form_for(@list) do |f| %>
+      <%= f.text_field :name, :class => "new-todo", :placeholder => (@list.errors.full_messages_for(:name).first || "Enter a new list name...") %>
+      <%= f.submit :style => "display: none" %>
     <% end %>
-  </ul>
-</body>
+  </header> <!-- close .header -->
+  <section class="main">
+    <!--Index of all Lists -->
+    <ul class="todo-list">
+      <% @lists.each do |list| %>
+        <li>
+          <div class="view">
+            <label><%= link_to list.name, list_path(list) %></label>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </section> <!-- close .main -->
+  <footer class="footer">
+  </footer>
+</section> <!-- close .todoapp -->
