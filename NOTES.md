@@ -35,3 +35,7 @@ Step 2: Add Items to a List
   - table :items add status:integer column (0 or 1)
   - use minimal javascript, focus on Rails forms
 
+Step 5: Refactor Lists/Show Into Partials
+  - partial for iteration over @list.items
+  - helper methods within partial to be language-consistent (avoid mixing html/ruby if possible)
+

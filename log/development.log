@@ -3213,3 +3213,11 @@ Processing by ListsController#show as HTML
   [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."list_id" = ?  [["list_id", 3]]
   Rendered lists/show.html.erb within layouts/application (2.9ms)
 Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-26 13:30:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListsController#index as HTML
+  [1m[35mList Load (0.1ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 247ms (Views: 233.5ms | ActiveRecord: 0.4ms)
