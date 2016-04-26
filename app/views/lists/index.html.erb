@@ -1,0 +1,16 @@
+<header>
+  <h1>Your Lists</h1>
+  <!-- New List Form incorporated into lists/index view -->
+  <%= form_for(@list) do |list_builder| %>
+    <%= list_builder.text_field :name %>
+    <%= list_builder.submit :style => "display: none" %>
+  <% end %>
+</header>
+<body>
+  <!--Index of all Lists -->
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+</body>
