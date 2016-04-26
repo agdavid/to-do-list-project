@@ -10,7 +10,7 @@ Step 1: CRUD Lists
   - views/lists/show.html.erb
 
 Step 2: Add Items to a List
--[x] 2(a) plan out ORM relationship
+[x] 2(a) plan out ORM relationship
   - table :items
     t.string :description
     t.integer :list_id
@@ -19,7 +19,7 @@ Step 2: Add Items to a List
   - model: list
     has_many :items
 
-- 2(b) allow user to add item to list
+[x] 2(b) allow user to add item to list
   - nested resource
     - item exists within a list, never outside one; should always be associated
       - config/routes
