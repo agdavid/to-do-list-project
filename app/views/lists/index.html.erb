@@ -2,7 +2,7 @@
   <h1>Your Lists</h1>
   <!-- New List Form incorporated into lists/index view -->
   <%= form_for(@list) do |list_builder| %>
-    <%= list_builder.text_field :name %>
+    <%= list_builder.text_field :name, :placeholder => (@list.errors.full_messages_for(:name).first || "Enter a new list name...") %>
     <%= list_builder.submit :style => "display: none" %>
   <% end %>
 </header>

@@ -5,18 +5,19 @@ class ListsController < ApplicationController
     @lists = List.all #query db for all @lists
   end
 
+  def show
+    @list = List.find(params[:id])
+    @item = @list.items.build
+  end
+
   def create
     @list = List.new(list_params)
     if @list.save
       redirect_to list_path(@list)
     else
-      redirect_to lists_path
+      @lists = List.all
+      render "index"
     end
-  end
-
-  def show
-    @list = List.find(params[:id])
-    @item = @list.items.build
   end
 
   private
