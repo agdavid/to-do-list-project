@@ -10,9 +10,9 @@ Step 1: CRUD Lists
   - views/lists/show.html.erb
 
 Step 2: Add Items to a List
-- 2(a) plan out ORM relationship
-  - table :lists
-    t.string :name
+-[x] 2(a) plan out ORM relationship
+  - table :items
+    t.string :description
     t.integer :list_id
   - model: item
     belongs_to :list
